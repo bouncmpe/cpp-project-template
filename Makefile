@@ -1,6 +1,5 @@
 SOURCE_DIRECTORY = $(PWD)
 BUILD_DIRECTORY = /tmp/build
-CTEST_OUTPUT_ON_FAILURE=1 
 
 all: configure build test
 
@@ -9,7 +8,6 @@ configure:
 		-S $(SOURCE_DIRECTORY) \
 		-B $(BUILD_DIRECTORY) \
 		-DCMAKE_BUILD_TYPE=Release \
-		
 		-DENABLE_TESTS=ON
 	
 build:
